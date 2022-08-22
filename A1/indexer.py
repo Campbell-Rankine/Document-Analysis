@@ -97,7 +97,7 @@ def index_from_tokens(all_toks):
     #initialize doc frequency
     doc_freq = dict()
     index = dict()
-    for tok in tqdm(all_toks):
+    for tok, doc in tqdm(all_toks):
         if not tok[0] in index.keys():
             #Add key to both dictionaries
             index[tok[0]] = []

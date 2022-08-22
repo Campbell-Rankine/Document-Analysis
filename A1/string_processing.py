@@ -15,9 +15,9 @@ def process_tokens(toks):
     # tackling the other assignment questions
 
     #return process_tokens_1(toks)
-    #return process_tokens_2(toks)
+    return process_tokens_2(toks)
     #return process_tokens_3(toks)
-    return process_tokens_original(toks)
+    #return process_tokens_original(toks)
 
 # get the nltk stopwords list
 stopwords = set(nltk.corpus.stopwords.words("english"))
@@ -83,6 +83,7 @@ def process_tokens_2(toks):
         #TODO: your code should modify t and/or do some sort of filtering
         t = lem.lemmatize(stemmer.stem(t))
         new_toks.append(t)
+    print(new_toks)
     return new_toks
 
 def process_tokens_3(toks):
